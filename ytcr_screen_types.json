@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "channel": "YTCR",
+  "brand": "Core Realty Dubai",
+  "palette": {
+    "bg_dark": "#101010",
+    "bg_panel": "#1A1A1A",
+    "accent": "#F0FF02",
+    "accent_secondary": "#FFD700",
+    "white": "#EFEFEF",
+    "card_bg": "#1E1E1E",
+    "muted": "#888888",
+    "error": "#FF0000"
+  },
+  "font": "Playfair Display + Inter",
+  "font_headline": "Playfair Display",
+  "font_body": "Inter",
+  "categories": [
+    {"id": "titles", "name": "Titles & Navigation", "description": "Section and topic headings — choose one per segment transition"},
+    {"id": "text", "name": "Text Screens", "description": "Speaker intros, data slides, disclaimer, informational overlays"},
+    {"id": "ui", "name": "UI Elements", "description": "CTAs, QR codes, call-to-action overlays"}
+  ],
+  "types": [
+    {
+      "id": "disclaimer",
+      "name": "Disclaimer",
+      "category": "text",
+      "description": "Full-screen disclaimer on dark blurred background. Title in uppercase serif. First paragraph highlighted in yellow accent. Remaining text in standard gray.",
+      "when": "Opening of every video — legal and financial disclaimers. Required for investment-related content, market analysis, and property recommendations.",
+      "max_text": "Title: 1 word. Highlight: 1-2 sentences. Body: 2-3 sentences.",
+      "keywords": ["disclaimer", "legal", "not financial advice", "risk", "consult professional", "opening"]
+    },
+    {
+      "id": "speaker_intro",
+      "name": "Speaker Intro",
+      "category": "text",
+      "description": "Full-screen speaker video with dark lower-third overlay panel in bottom-left. Yellow accent line on top of overlay. Name in uppercase serif, role/company in light sans-serif.",
+      "when": "First appearance of host or guest expert. Introduce broker name, title, company, and credentials.",
+      "max_text": "Name: 2-3 words. Role: 1 line (title + company).",
+      "keywords": ["intro", "speaker", "lower third", "broker", "guest", "expert", "name", "title"]
+    },
+    {
+      "id": "cta_qr",
+      "name": "CTA / QR Code",
+      "category": "ui",
+      "description": "Split layout: 45% dark panel (left) with title, QR code, and 'Link in Description' + yellow arrow; 55% speaker video (right).",
+      "when": "End of video or mid-roll CTA. Drive viewers to website, WhatsApp, consultation booking, or Golden Visa calculator.",
+      "max_text": "Title: 2-4 words. Link label: 1 line.",
+      "keywords": ["CTA", "QR code", "link", "contact", "book", "consultation", "WhatsApp"]
+    },
+    {
+      "id": "side_slide_text",
+      "name": "Side Slide — Text",
+      "category": "text",
+      "description": "Split layout: 55% dark text panel (left) with serif title, body text with yellow highlighted keywords, and muted footnote; 45% speaker video (right).",
+      "when": "Key facts, comparisons, area data, ROI numbers, process steps with explanations. Any content requiring the viewer to read while the speaker explains.",
+      "max_text": "Title: 2-4 words. Body: 3-5 sentences. Footnote: 1 line. Yellow highlights: max 3 per slide.",
+      "keywords": ["data", "facts", "ROI", "comparison", "area", "yield", "process", "commission", "Golden Visa"]
+    },
+    {
+      "id": "section_title",
+      "name": "Section Title",
+      "category": "titles",
+      "description": "Full speaker video with semi-transparent dark overlay. Large centered serif title in uppercase white with text shadow. High-impact, cinematic feel.",
+      "when": "Start of a new major section or chapter in the video. High-impact topic transitions between content segments.",
+      "max_text": "2-4 words, ALL CAPS. No body text.",
+      "keywords": ["section", "chapter", "topic", "transition", "segment", "part"]
+    },
+    {
+      "id": "text_screen",
+      "name": "Text Screen",
+      "category": "text",
+      "description": "Dark gradient background, no speaker. Serif title top-left in italic uppercase. Body text with yellow-highlighted key data points. Clean, editorial layout for dense information.",
+      "when": "Data-heavy content without speaker: market statistics, comparison tables, regulatory information, timelines, area overviews.",
+      "max_text": "Title: 2-4 words. Body: 4-6 sentences. Yellow highlights: max 3 per screen.",
+      "keywords": ["market data", "statistics", "analysis", "regulations", "overview", "summary", "timeline"]
+    },
+    {
+      "id": "section_title_centered",
+      "name": "Section Title Centered",
+      "category": "titles",
+      "description": "Dark gradient background, no speaker. Centered serif title with one accent-colored keyword in yellow. Muted italic subtitle below. Minimalist and focused.",
+      "when": "Lighter section transitions, sub-topics within a chapter, thematic breaks. Less dramatic than the full Section Title.",
+      "max_text": "Title: 2-4 words (1 highlighted). Subtitle: 1 short sentence.",
+      "keywords": ["sub-topic", "transition", "theme", "break", "intro", "next"]
+    }
+  ]
+}
