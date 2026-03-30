@@ -47,6 +47,9 @@ a.fbtn{text-decoration:none;color:inherit}
 .tc-hdr{display:flex;align-items:center;gap:14px;padding:18px 24px;border-bottom:1px solid var(--border);background:rgba(0,0,0,.15)}
 .tc-id{font-size:14px;font-weight:700;color:var(--accent);background:rgba(240,255,2,.1);padding:4px 12px;border-radius:5px;letter-spacing:.5px;font-family:monospace}
 .tc-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700}
+.tc-copy{margin-left:auto;background:var(--card);border:1px solid var(--border);color:var(--muted);font-size:13px;padding:5px 12px;border-radius:6px;cursor:pointer;font-family:inherit;transition:.2s;display:flex;align-items:center;gap:6px}
+.tc-copy:hover{border-color:var(--accent);color:var(--accent)}
+.tc-copy.copied{border-color:var(--success);color:var(--success)}
 .tc-mock-wrap{padding:24px;display:flex;justify-content:center}
 .mock{width:100%;max-width:840px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--border);position:relative}
 .tc-info{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;padding:0 24px 20px}
@@ -150,7 +153,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
 .cd-line{width:40px;height:1px;background:var(--muted)}
 .cd-txt{font-size:18px;font-weight:600}
 .cd-txt.acc{color:var(--accent)}
-.cd-pip{position:absolute;bottom:10px;right:10px;width:200px;height:270px;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.15)}
+.cd-pip{position:absolute;bottom:10px;right:10px;width:120px;height:160px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,.15)}
 .cd-pip .spk{width:100%;height:100%}
 .cd-pip .spk::after{font-size:10px;padding:4px 10px;letter-spacing:1px}
 
@@ -433,7 +436,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   <div class="cat-hdr"><span class="cat-letter">A</span><div><div class="cat-title">Titles & Navigation</div><div class="cat-desc">Ways to show a heading/topic — pick one (sometimes two) per segment</div></div><span class="cat-count">4 types</span></div>
 
   <!-- section_title -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-section_title">section_title</span><span class="tc-name">Section Title</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-section_title">section_title</span><span class="tc-name">Section Title</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-st"><div class="spk"></div><h2>MARKET<br>OVERVIEW</h2></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Full speaker video with semi-transparent dark overlay. Large centered serif title in uppercase white. High-impact, cinematic feel.</div></div>
@@ -444,7 +447,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- section_title_centered -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-section_title_centered">section_title_centered</span><span class="tc-name">Section Title Centered</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-section_title_centered">section_title_centered</span><span class="tc-name">Section Title Centered</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-stc"><h2>Investment <span class="hl">Returns</span><br>Explained</h2><p>Understanding ROI in Dubai real estate</p></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Dark gradient background, no speaker. Centered serif title with one accent keyword in yellow. Muted italic subtitle below.</div></div>
@@ -455,7 +458,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- lower_third -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-lower_third">lower_third</span><span class="tc-name">Lower Third Title</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-lower_third">lower_third</span><span class="tc-name">Lower Third Title</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-lt"><div class="spk"></div><div class="m-lt-bar"><h3>PART 3</h3><p>Why brokers choose Dubai over London</p></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Title bar at the bottom of speaker frame — dark panel with yellow accent border on top. Speaker stays on screen.</div></div>
@@ -466,7 +469,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- step_cards -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-step_cards">step_cards</span><span class="tc-name">Step Cards</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-step_cards">step_cards</span><span class="tc-name">Step Cards</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-sc"><div class="sc-card on"><div class="sc-lbl">STEP 1</div><hr class="sc-sep"><div class="sc-txt">Research</div></div><div class="sc-card on"><div class="sc-lbl">STEP 2</div><hr class="sc-sep"><div class="sc-txt">Due Diligence</div></div><div class="sc-card on"><div class="sc-lbl">STEP 3</div><hr class="sc-sep"><div class="sc-txt">Offer</div></div><div class="sc-card off"><div class="sc-lbl">STEP 4</div><hr class="sc-sep"></div><div class="sc-card off"><div class="sc-lbl">STEP 5</div><hr class="sc-sep"></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Progressive reveal cards — steps fill in as the video advances. Shows viewer where they are in the process.</div></div>
@@ -482,7 +485,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   <div class="cat-hdr"><span class="cat-letter">B</span><div><div class="cat-title">Text Screens</div><div class="cat-desc">Lists, key points, speaker intros, grids, disclaimers</div></div><span class="cat-count">7 types</span></div>
 
   <!-- talking_head -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-talking_head">talking_head</span><span class="tc-name">Talking Head</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-talking_head">talking_head</span><span class="tc-name">Talking Head</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-th"><div class="spk" style="height:100%"></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Clean speaker shot without any overlays. Most powerful type for emotional impact and direct address.</div></div>
@@ -493,7 +496,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- side_slide_text -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-side_slide_text">side_slide_text</span><span class="tc-name">Side Slide — Text</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-side_slide_text">side_slide_text</span><span class="tc-name">Side Slide — Text</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-ss"><div class="m-ss-l"><h3>Golden Visa</h3><ul><li>AED 2M minimum</li><li>Off-plan eligible</li><li>10-year residency</li><li>Family included</li></ul><div class="add">Processing: 30-60 days</div></div><div class="spk"></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Text/bullets left (55%), speaker video right (45%). Serif title in accent color.</div></div>
@@ -504,7 +507,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- side_slide_pills -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-side_slide_pills">side_slide_pills</span><span class="tc-name">Side Slide — Pills</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-side_slide_pills">side_slide_pills</span><span class="tc-name">Side Slide — Pills</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-sp"><div class="m-sp-l"><div class="pill">100% commission</div><div class="pill">AI-powered CRM</div><div class="pill">Monthly events</div></div><div class="spk"></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Colored pill tags on the left + speaker on the right. Gradient-filled pills.</div></div>
@@ -515,7 +518,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- numbered_list -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-numbered_list">numbered_list</span><span class="tc-name">Numbered List</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-numbered_list">numbered_list</span><span class="tc-name">Numbered List</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-nl"><div class="nl-col"><div class="nl-item"><span class="nl-badge">1</span><span class="nl-txt">Dubai Marina</span></div><div class="nl-item"><span class="nl-badge">2</span><span class="nl-txt">Downtown</span></div><div class="nl-item"><span class="nl-badge">3</span><span class="nl-txt">Business Bay</span></div><div class="nl-item"><span class="nl-badge">4</span><span class="nl-txt">JVC</span></div><div class="nl-item"><span class="nl-badge">5</span><span class="nl-txt">Dubai Hills</span></div></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Vertical list with numbered gradient badges. No speaker visible.</div></div>
@@ -526,7 +529,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- speaker_intro -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-speaker_intro">speaker_intro</span><span class="tc-name">Speaker Intro</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-speaker_intro">speaker_intro</span><span class="tc-name">Speaker Intro</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-si"><div class="spk"></div><div class="m-si-bar"><h3>John Smithson</h3><p>Senior Broker &middot; Core Realty Dubai</p></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Dark lower-third overlay with yellow accent line. Name in uppercase serif, role in light sans-serif.</div></div>
@@ -537,7 +540,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- icon_grid -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-icon_grid">icon_grid</span><span class="tc-name">Icon Grid</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-icon_grid">icon_grid</span><span class="tc-name">Icon Grid</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-ig"><div class="ig-title">Investment Types</div><div class="ig-row"><div class="ig-card"><div class="ig-box"><div class="ig-icon">&#x1F3E2;</div></div><div class="ig-label">Off-Plan</div></div><div class="ig-card"><div class="ig-box"><div class="ig-icon">&#x1F3E0;</div></div><div class="ig-label">Ready<br>Property</div></div><div class="ig-card"><div class="ig-box"><div class="ig-icon">&#x1F4B0;</div></div><div class="ig-label">Rental<br>Income</div></div></div><div class="ig-pip"><div class="spk"></div></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Title + 2-4 cards with icons in a row. Fullscreen with PIP speaker in corner.</div></div>
@@ -548,7 +551,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- disclaimer -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-disclaimer">disclaimer</span><span class="tc-name">Disclaimer</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-disclaimer">disclaimer</span><span class="tc-name">Disclaimer</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-disc"><h2>Disclaimer</h2><div class="hl">This video is for informational purposes only and does not constitute financial or investment advice.</div><div class="body">Consult a qualified professional before making any real estate investment decisions. Core Realty and its representatives assume no liability for actions taken based on the content of this video.</div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Full-screen legal text on dark blurred background. Serif title. First paragraph in yellow. Remaining in muted gray.</div></div>
@@ -564,7 +567,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   <div class="cat-hdr"><span class="cat-letter">C</span><div><div class="cat-title">Diagrams</div><div class="cat-desc">Circle charts, flows, process diagrams</div></div><span class="cat-count">2 types</span></div>
 
   <!-- circle_diagram -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-circle_diagram">circle_diagram</span><span class="tc-name">Circle / Venn</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-circle_diagram">circle_diagram</span><span class="tc-name">Circle / Venn</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-cd"><div class="cd-area"><div class="cd-big"></div><div class="cd-sm"></div></div><div class="cd-labels"><div class="cd-lbl"><div class="cd-line"></div><div class="cd-txt">All Investors</div></div><div class="cd-lbl"><div class="cd-line"></div><div class="cd-txt acc">Golden Visa Eligible</div></div></div><div class="cd-pip"><div class="spk"></div></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Nested or overlapping circles with labels + PIP speaker in corner.</div></div>
@@ -575,7 +578,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- flow_process -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-flow_process">flow_process</span><span class="tc-name">Flow / Process</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-flow_process">flow_process</span><span class="tc-name">Flow / Process</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-fp"><div class="fp-node">Select<br>Area</div><div class="fp-arrow">&rarr;</div><div class="fp-node">Due<br>Diligence</div><div class="fp-arrow">&rarr;</div><div class="fp-node">Make<br>Offer</div><div class="fp-arrow">&rarr;</div><div class="fp-node">Title<br>Deed</div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Blocks connected with arrows: A &rarr; B &rarr; C. Shows sequential process or cause-effect chains.</div></div>
@@ -591,7 +594,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   <div class="cat-hdr"><span class="cat-letter">D</span><div><div class="cat-title">Data & Charts</div><div class="cat-desc">Graphs, comparisons, calculations</div></div><span class="cat-count">4 types</span></div>
 
   <!-- chart_curve -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-chart_curve">chart_curve</span><span class="tc-name">Chart — Curve</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-chart_curve">chart_curve</span><span class="tc-name">Chart — Curve</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-cc"><div class="cc-title">Dubai Property Price Index</div><div class="cc-stats"><div class="cc-stat"><div class="cc-stat-val">+18%</div><div class="cc-stat-lbl">YoY Growth</div></div><div class="cc-stat"><div class="cc-stat-val">2,100</div><div class="cc-stat-lbl">AED/sqft avg</div></div><div class="cc-stat"><div class="cc-stat-val">Q4</div><div class="cc-stat-lbl">Peak Quarter</div></div></div><div class="cc-area"><div class="cc-ylabel">&#x2191;</div><div class="cc-peak">+18%</div><svg viewBox="0 0 400 120" preserveAspectRatio="none"><defs><linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F0FF02" stop-opacity=".3"/><stop offset="100%" stop-color="#F0FF02" stop-opacity="0"/></linearGradient></defs><path d="M0,100 C60,90 100,80 160,50 S280,10 400,5 L400,120 L0,120Z" fill="url(#gfill)"/><path d="M0,100 C60,90 100,80 160,50 S280,10 400,5" fill="none" stroke="#F0FF02" stroke-width="3"/></svg></div><div class="cc-labels"><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span></div><div class="cc-legend"><div class="cc-leg"><i style="background:var(--accent)"></i>Price Index</div></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Stats row at top + SVG line/area chart + axis labels + legend. For time-series data.</div></div>
@@ -602,7 +605,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- chart_bars -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-chart_bars">chart_bars</span><span class="tc-name">Chart — Bars</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-chart_bars">chart_bars</span><span class="tc-name">Chart — Bars</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-cb"><div class="cb-title">Rental Yield by Area</div><div class="cb-area"><div class="bar" style="height:85%"></div><div class="bar" style="height:78%"></div><div class="bar" style="height:70%"></div><div class="bar" style="height:65%"></div><div class="bar" style="height:60%"></div><div class="bar" style="height:55%"></div><div class="bar" style="height:48%"></div><div class="bar" style="height:40%"></div></div><div class="cb-labels"><span>JVC</span><span>DSO</span><span>JVT</span><span>Marina</span><span>BBay</span><span>DXBHills</span><span>Dtown</span><span>Palm</span></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Column/bar chart with category labels. Gradient-filled bars.</div></div>
@@ -613,7 +616,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- comparison -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-comparison">comparison</span><span class="tc-name">Comparison</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-comparison">comparison</span><span class="tc-name">Comparison</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-cmp"><div class="cmp-item"><div class="cmp-bar-wrap"><div class="cmp-bar-fill a" style="height:60%"><div class="cmp-val">3%</div><div class="cmp-sub">net yield</div></div></div><div class="cmp-name">London</div><div class="cmp-desc">High entry, low yield</div></div><div class="cmp-item"><div class="cmp-bar-wrap"><div class="cmp-bar-fill b" style="height:85%"><div class="cmp-val">7%</div><div class="cmp-sub">net yield</div></div></div><div class="cmp-name">Dubai</div><div class="cmp-desc">Tax-free, high yield</div></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Two items side by side with different colors. Vertical bars showing relative values.</div></div>
@@ -624,7 +627,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- math_equation -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-math_equation">math_equation</span><span class="tc-name">Math / Equation</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-math_equation">math_equation</span><span class="tc-name">Math / Equation</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-math"><div class="math-stack"><div class="math-item">AED 2,000,000</div><div class="math-item">&times; 7% yield</div><div class="math-item">&times; 5 years</div></div><div class="math-eq">=</div><div class="math-res"><span class="big">AED 700,000</span><span class="sub">Total rental income</span></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Visual arithmetic: stacked formula items + equals sign + result card.</div></div>
@@ -640,7 +643,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   <div class="cat-hdr"><span class="cat-letter">E</span><div><div class="cat-title">Multimedia</div><div class="cat-desc">Video maps, related content navigation</div></div><span class="cat-count">1 type</span></div>
 
   <!-- video_map -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-video_map">video_map</span><span class="tc-name">Video Map</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-video_map">video_map</span><span class="tc-name">Video Map</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-vm"><div class="vm-main">This<br>Video</div><div class="vm-branches"><div class="vm-branch"><div class="vm-arrow">&rarr;</div><div class="vm-thumb">Golden Visa</div></div><div class="vm-branch"><div class="vm-arrow">&rarr;</div><div class="vm-thumb">Broker Life</div></div><div class="vm-branch"><div class="vm-arrow">&rarr;</div><div class="vm-thumb">Market Update</div></div><div class="vm-branch"><div class="vm-arrow">&rarr;</div><div class="vm-thumb">Area Guide</div></div></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">Central video box branching to 3-5 related video thumbnails with arrows.</div></div>
@@ -656,7 +659,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   <div class="cat-hdr"><span class="cat-letter">F</span><div><div class="cat-title">UI Elements</div><div class="cat-desc">CTAs, QR codes, end screen</div></div><span class="cat-count">2 types</span></div>
 
   <!-- cta_qr -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-cta_qr">cta_qr</span><span class="tc-name">CTA / QR Code</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-cta_qr">cta_qr</span><span class="tc-name">CTA / QR Code</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-cta-qr"><div class="spk"></div><div class="cta-qr-overlay"><div class="cta-qr-box"><div class="cta-qr-inner">QR CODE</div></div><div class="cta-qr-text-wrap"><div class="cta-qr-title">Book a Free<br>Consultation</div><div class="cta-qr-sub">Link in Description &darr;</div></div></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">QR code + headline + "Link in Description" over speaker video. Drives traffic to <a href="https://corerealty.ae" target="_blank" style="color:var(--accent)">corerealty.ae</a>.</div></div>
@@ -667,7 +670,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
   </div>
 
   <!-- ctv -->
-  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-ctv">ctv</span><span class="tc-name">CTV / End Screen</span></div>
+  <div class="tc"><div class="tc-hdr"><span class="tc-id" id="s-ctv">ctv</span><span class="tc-name">CTV / End Screen</span><button class="tc-copy" onclick="copyLink(this)">&#x1F517; Copy link</button></div>
     <div class="tc-mock-wrap"><div class="mock"><div class="m-ctv"><div class="m-ctv-overlay"><div class="ctv-vid">Next Video<br>Preview</div><div class="ctv-label">Watch next &rarr;</div></div><div class="spk"></div></div></div></div>
     <div class="tc-info">
       <div class="info-box"><div class="info-lbl">Description</div><div class="info-txt">End screen: gradient overlay left with YouTube video card + speaker right.</div></div>
@@ -692,6 +695,7 @@ hr.sc-sep{width:100%;height:0;border:none;border-top:2px solid rgba(255,255,255,
 
 <script>
 function closeToc(){document.getElementById('toc').classList.remove('open')}
+function copyLink(btn){var id=btn.parentElement.querySelector('.tc-id').id;var url=location.origin+location.pathname+'#'+id;navigator.clipboard.writeText(url).then(function(){btn.textContent='Copied!';btn.classList.add('copied');setTimeout(function(){btn.innerHTML='&#x1F517; Copy link';btn.classList.remove('copied')},1500)})}
 document.querySelectorAll('.fbtn').forEach(b=>{b.addEventListener('click',function(){document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));this.classList.add('on')})})
 // Dubai time (UTC+4) in header
 function setDubaiDate(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Dubai'}));var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];document.querySelectorAll('[id=hdr-date]').forEach(function(el){el.textContent=d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear()})}
