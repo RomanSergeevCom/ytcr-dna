@@ -18,6 +18,16 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--w
 .hdr-link{font-size:14px;color:var(--muted);text-decoration:none;transition:color .2s}
 .hdr-link:hover{color:var(--accent)}
 .hdr-badge{font-size:13px;font-weight:700;color:var(--bg);background:var(--accent-grad);padding:5px 14px;border-radius:14px}
+.hdr-ver{font-size:11px;color:var(--muted);font-family:monospace;letter-spacing:.5px}
+.hdr-powered{font-size:12px;color:var(--muted)}
+.hdr-powered a{color:var(--accent);text-decoration:none}
+.hdr-powered a:hover{text-decoration:underline}
+.footer-credits{margin-top:12px;font-size:13px;color:var(--muted)}
+.footer-credits a{color:var(--accent);text-decoration:none}
+.footer-credits a:hover{text-decoration:underline}
+.footer-contacts{margin-top:8px;font-size:12px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.footer-contacts a{color:var(--muted);text-decoration:none}
+.footer-contacts a:hover{color:var(--accent)}
 
 .content{padding:40px;max-width:1100px;margin:0 auto}
 
@@ -86,8 +96,10 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--w
   <div class="hdr-left">
     <a href="../" class="logo">Core Realty</a>
     <div class="hdr-title">Channel Profile</div>
+    <div class="hdr-ver">v1.0 &middot; <span id="hdr-date"></span></div>
   </div>
   <div class="hdr-right">
+    <div class="hdr-powered">Powered by <a href="https://rya.ae" target="_blank">RYA.AE</a></div>
     <a href="../" class="hdr-link">Screen Types</a>
     <div class="hdr-badge">YTCR</div>
   </div>
@@ -289,7 +301,20 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--w
 
 </div>
 
-<div class="footer">Channel Profile YTCR v1.0 &middot; Core Realty Dubai</div>
+<div class="footer">
+  Channel Profile YTCR v1.0 &middot; Core Realty Dubai
+  <div class="footer-credits">Powered by <a href="https://rya.ae" target="_blank">RYA.AE</a> &middot; Producer: Roman Sergeev</div>
+  <div class="footer-contacts">
+    <a href="https://t.me/romansergeev" target="_blank">Telegram: @romansergeev</a>
+    <a href="https://wa.me/971569399953" target="_blank">WhatsApp: +971 56 939 9953</a>
+    <a href="mailto:rs@rya.ae">Email: rs@rya.ae</a>
+  </div>
+</div>
+
+<script>
+function setDubaiDate(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Dubai'}));var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];document.querySelectorAll('[id=hdr-date]').forEach(function(el){el.textContent=d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear()})}
+setDubaiDate()
+</script>
 
 </body>
 </html>
